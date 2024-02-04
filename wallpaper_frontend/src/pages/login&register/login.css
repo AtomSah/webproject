@@ -1,0 +1,103 @@
+
+/*.login-overlay {*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    position: fixed;*/
+/*    z-index: 101;*/
+/*    backdrop-filter: blur(3px);*/
+/*}*/
+
+.login-modal-content{
+    position: absolute;
+    box: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 14px 28px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    width: 29vw;
+    height: 65vh;
+    z-index: 102;
+    border: 2px solid#162938;
+
+}
+
+.login-modal-content h2{
+    font-size: 2rem;
+    color: #162938;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.fname, .lname, .email, .password{
+    /*display: flex;*/
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    border-width: 3px  ;
+    border-style: solid;
+    border-color: rgb(200, 200, 200);
+    padding: 16px 16px 12px 12px;
+}
+
+.sign-in{
+    font-weight: 500;
+    width: 15vw;
+    height: 7vh;
+    background: #070202;
+    cursor: pointer;
+    /*border: none;*/
+    color: #ffffff;
+    box-shadow: 10px 10px 10px -1px;
+    border-radius: 15px;
+    transition: all ease 0.2s;
+    margin: 35px 70px;
+    /*display: flex;*/
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*.email{*/
+    /*display: block;*/
+    /*width: 330px;*/
+    /*margin-top: 10px;*/
+    /*padding-top: 12px;*/
+    /*padding-bottom: 12px;*/
+    /*padding-right: 16px;*/
+    /*padding-left: 16px;*/
+    /*border-radius: 8px;*/
+    /*font-size: 16px;*/
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    /*border-color: rgb(200, 200, 200);*/
+/*}*/
+/*.sign-up{*/
+/*    color: white;*/
+/*    font-size: 18px;*/
+/*    font-weight: bold;*/
+/*    background-color: rgb(47, 127, 231);*/
+/*    width: 370px;*/
+/*    border-radius: 8px;*/
+/*    padding-top: 12px;*/
+/*    padding-bottom: 12px;*/
+/*    border: none;*/
+/*    margin-top: 10px;*/
+/*    border-style: solid;*/
+/*    display: block;*/
+/*}*/

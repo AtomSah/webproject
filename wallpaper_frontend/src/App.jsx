@@ -1,6 +1,7 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import HomePage from "./pages/homePages/homePage.jsx";
+import Login from "./pages/login&register/login.jsx";
 
 const queryClient = new QueryClient();
 
@@ -10,6 +11,7 @@ function App() {
             <QueryClientProvider client={queryClient}>
                 <RouterProvider router={createBrowserRouter([
                     {path: "/", element: <HomePage/>},
+                    {path: "/login", element: <Login/>},
                 ])} />
             </QueryClientProvider>
         </>
