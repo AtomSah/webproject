@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react'
 // import Login from "../login&register/login.jsx";
 import {Link} from "react-router-dom"
 const menuItems = [
+
     {
         name: 'Home',
         href: '#',
@@ -15,6 +16,7 @@ const menuItems = [
     {
         name: 'Contact',
         href: '#',
+
     },
 ]
 
@@ -60,21 +62,23 @@ function Navbar() {
                         ))}
                     </ul>
                 </div>
-                <div  className="hidden lg:block"  >
-                    <button
-                        type="button"
-                        className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                    >
-                        Sign Up
-                    </button>
-                </div>
-                <div  className="hidden lg:block"  >
+                <div  className="hidden lg:block">
                     <Link to={"/Login"}>
                         <button
                             type="button"
                             className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                         >
-                            Sign In
+                            Login
+                        </button>
+                    </Link>
+                </div>
+                <div  className="hidden lg:block">
+                    <Link to={"/Register"}>
+                        <button
+                            type="button"
+                            className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                        >
+                            Sign Up
                         </button>
                     </Link>
                 </div>
