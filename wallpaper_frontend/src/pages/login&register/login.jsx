@@ -12,7 +12,7 @@ const Login = () => {
                 <form>
                     <input className="email" type="text" placeholder="Email"></input>
                     <input className="password" type="password" placeholder="Password"></input>
-                    <button className="Login">Login</button>
+                    <button className="btn-login">Login</button>
                 </form>
             </div>
         </>
