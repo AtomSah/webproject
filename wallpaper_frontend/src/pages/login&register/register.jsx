@@ -14,6 +14,7 @@ const Register = ()=> {
                         <input className="email" type="text" placeholder="Email"></input>
                         <input className="password" type="password" placeholder="Password"></input>
                         <input className="confirm_password" type="password" placeholder="Confirm Password"></input>
+                        <input className="security-question" type="text" placeholder="Security Question"></input>
                         <button className="sign-in">Sign in</button>
                     </form>
                 </div>

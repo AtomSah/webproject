@@ -1,5 +1,7 @@
 
-
+*{
+    background-image: image("product_1.png");
+}
 
 .login-modal-content{
     position: absolute;

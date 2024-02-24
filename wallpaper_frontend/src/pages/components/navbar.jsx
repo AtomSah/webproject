@@ -40,14 +40,18 @@ class Navbar extends Component{
                             <input type={"search"} placeholder={"SEARCH"}/>
                         </div>
                     </div>
-                    <div className={"btn-login  w-28 h-11 flex items-center justify-center mr-20"} >
-                        <Link to={'/login'}><h3><a>Sign-In</a></h3></Link>
+
+                <div className={"flex gap-4"}>
+                    <div className={"btn-login  w-28 h-11 flex items-center justify-center"} >
+                        <Link to={'/login'}><h3 onClick={console.log("login")}><a>Sign-In</a></h3></Link>
                     </div>
 
                     <div className={" btn-login   w-28 h-11 flex items-center justify-center "} >
                         <Link to={'/register'}><h3><a>Sign-Up</a></h3></Link>
                     </div>
+                </div>
                 </ul>
+
             </nav>
         )
     }

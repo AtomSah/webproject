@@ -10,6 +10,7 @@ import slider2 from '../../assets/bg2.png';
 import slider3 from '../../assets/bg3.png';
 import slider4 from '../../assets/bg4.png';
 import slider5 from '../../assets/bg5.png';
+import {FaSearch} from "react-icons/fa";
 
 function Carousel() {
     const slideStyles = {
@@ -71,7 +72,6 @@ function Carousel() {
                 </div>
             </SwiperSlide>
             </Swiper>
-
             <div>
             </div>
         </div>

@@ -191,7 +191,7 @@
     box-shadow: 0px 8px 20px rgba(0,0,0,0.06);
 }
 .left-side-wrapper {
-    padding:0 12rem;
+    padding:0 1rem;
     display: flex;
     position: relative;
     flex: 1;
@@ -202,7 +202,7 @@
 .left-side-wrapper input{
     border: none;
     outline: none;
-    padding: 0 9rem;
+    width: 100%;
 }
 .search-input-with-dropdown .search-icon {
     width: 16px;
@@ -210,4 +210,32 @@
     color: #9e9ea7;
     margin-right: 20px ;
 }
+
+/*popular ko lagi css*/
+.popular {
+    color: black;
+    margin-top: 70px;
+}
+
+.popular h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.popular-item {
+    margin-top: 70px;
+    gap: 80px;
+    justify-content: center;
+}
+
+.popular-item img {
+    /* max-width: 100%; Ensure images take up the full width of the container */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
 

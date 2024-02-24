@@ -9,7 +9,8 @@
     border-radius: 15px;
     font-size: 1.1rem;
     width: 29vw;
-    height: 65vh;
+    height: 70
+    vh;
     z-index: 102;
     border: 2.5px solid#162938;
 }
@@ -20,7 +21,7 @@
     text-align: center;
     text-decoration: underline;
 }
-.username, .email, .password, .confirm_password{
+.username, .email, .password, .confirm_password, .security-question{
     /*display: flex;*/
     width: 100%;
     margin-top: 20px;
