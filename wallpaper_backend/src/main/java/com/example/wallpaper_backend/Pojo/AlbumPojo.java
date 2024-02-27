@@ -1,18 +1,20 @@
-package com.example.comixnookbackend.Pojo;
+package com.example.wallpaper_backend.Pojo;
 
-import jakarta.validation.constraints.NotEmpty;
-import lombok.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class GenrePojo {
+public class AlbumPojo {
 
     private Long id;
 
     @NotNull
-    private String genre;
+    private String album;
 }

@@ -1,8 +1,8 @@
-package com.example.comixnookbackend.Controller;
+package com.example.wallpaper_backend.Controller;
 
-import com.example.comixnookbackend.Entity.Item;
-import com.example.comixnookbackend.Pojo.ItemPojo;
-import com.example.comixnookbackend.Service.ItemService;
+import com.example.wallpaper_backend.Entity.Item;
+import com.example.wallpaper_backend.Pojo.ItemPojo;
+import com.example.wallpaper_backend.Service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

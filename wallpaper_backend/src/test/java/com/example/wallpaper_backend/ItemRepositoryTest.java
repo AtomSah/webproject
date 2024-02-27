@@ -1,9 +1,9 @@
 package com.example.wallpaper_backend;
 
 import com.example.wallpaper_backend.Entity.Item;
-import com.example.wallpaper_backend.Repo.CategoryRepo;
+import com.example.wallpaper_backend.Repo.AlbumRepo;
 import com.example.wallpaper_backend.Repo.ItemRepo;
-import com.example.comixnookbackend.util.ImageToBase64;
+import com.example.wallpaper_backend.Util.ImageToBase64;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -14,15 +14,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
-import java.time.LocalDate;
-
 @DataJpaTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ItemRepositoryTest {
     @Autowired
     private ItemRepo itemRepo;
     @Mock
-    private CategoryRepo categoryRepo;
+    private AlbumRepo albumRepo;
 
     @Mock
     private ImageToBase64 imageToBase64;

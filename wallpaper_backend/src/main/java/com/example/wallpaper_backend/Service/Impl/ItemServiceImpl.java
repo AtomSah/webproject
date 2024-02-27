@@ -1,16 +1,14 @@
-package com.example.comixnookbackend.Service.Impl;
-
-import com.example.comixnookbackend.Entity.Genre;
-import com.example.comixnookbackend.Entity.Item;
-import com.example.comixnookbackend.Pojo.ItemPojo;
-import com.example.comixnookbackend.Repo.GenreRepo;
-import com.example.comixnookbackend.Repo.ItemRepo;
-import com.example.comixnookbackend.Service.ItemService;
-import com.example.comixnookbackend.util.ImageToBase64;
+package com.example.wallpaper_backend.Service.Impl;
+import com.example.wallpaper_backend.Entity.Album;
+import com.example.wallpaper_backend.Entity.Item;
+import com.example.wallpaper_backend.Pojo.ItemPojo;
+import com.example.wallpaper_backend.Repo.AlbumRepo;
+import com.example.wallpaper_backend.Repo.ItemRepo;
+import com.example.wallpaper_backend.Service.ItemService;
+import com.example.wallpaper_backend.Util.ImageToBase64;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -24,9 +22,9 @@ import java.util.stream.Collectors;
 public class ItemServiceImpl implements ItemService {
 
     private final ItemRepo itemRepo;
-    private final GenreRepo genreRepo;
+    private final AlbumRepo albumRepo;
 
-    private final String UPLOAD_DIRECTORY = new StringBuilder().append(System.getProperty("user.dir")).append("/Comix-Images/item-images").toString();
+    private final String UPLOAD_DIRECTORY = new StringBuilder().append(System.getProperty("user.dir")).append("/Wallpaper-Images/Item-Images").toString();
     ImageToBase64 imageToBase64 = new ImageToBase64();
 
     @Override
@@ -40,8 +38,6 @@ public class ItemServiceImpl implements ItemService {
         }
 
         item.setItemName(itemPojo.getItemName());
-        item.setReleasedDate(itemPojo.getReleasedDate());
-        item.setItemDescription(itemPojo.getItemDescription());
         item.setDownloadLink(itemPojo.getDownloadLink());
 
         if (itemPojo.getItemImage() != null) {
@@ -50,9 +46,9 @@ public class ItemServiceImpl implements ItemService {
         }
         item.setItemImage(itemPojo.getItemImage().getOriginalFilename());
 
-        Genre genre = genreRepo.findById(itemPojo.getGenreId())
-                .orElseThrow(() -> new EntityNotFoundException("Genre not found with ID: " + itemPojo.getGenreId()));
-        item.setGenreId(genre);
+        Album album = albumRepo.findById(itemPojo.getAlbumId())
+                .orElseThrow(() -> new EntityNotFoundException("Genre not found with ID: " + itemPojo.getAlbumId()));
+        item.setAlbumId(album);
 
         itemRepo.save(item);
     }

@@ -1,9 +1,10 @@
-package com.example.comixnookbackend.Service.Impl;
+package com.example.wallpaper_backend.Service.Impl;
 
-import com.example.comixnookbackend.Entity.Genre;
-import com.example.comixnookbackend.Pojo.GenrePojo;
-import com.example.comixnookbackend.Repo.GenreRepo;
-import com.example.comixnookbackend.Service.GenreService;
+import com.example.wallpaper_backend.Entity.Album;
+import com.example.wallpaper_backend.Pojo.AlbumPojo;
+import com.example.wallpaper_backend.Repo.AlbumRepo;
+import com.example.wallpaper_backend.Service.AlbumService;
+import com.example.wallpaper_backend.Entity.Album;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,36 +13,36 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class GenreServiceImpl implements GenreService {
+public class AlbumServiceImpl implements AlbumService {
 
-    private final GenreRepo genreRepo;
+    private final AlbumRepo albumRepo;
 
     @Override
-    public void save(GenrePojo genrePojo) {
-        Genre genre = new Genre();
+    public void save(AlbumPojo albumPojo) {
+        Album album = new Album();
 
-        if(genrePojo.getId()!=null){
-            genre=genreRepo.findById(genrePojo.getId()).get();
+        if(albumPojo.getId()!=null){
+            album=albumRepo.findById(albumPojo.getId()).get();
         }
 
-        genre.setGenre(genrePojo.getGenre());
-        genreRepo.save(genre);
+        album.setAlbum(albumPojo.getAlbum());
+        albumRepo.save(album);
     }
 
 
     @Override
-    public List<Genre> getAll() {
-        return genreRepo.findAll(); // select * from genre
+    public List<Album> getAll() {
+        return albumRepo.findAll(); // select * from genre
     }
 
     @Override
     public void deleteById(Long id) {
-        genreRepo.deleteById(id); // delete from genre where id =?1
+        albumRepo.deleteById(id); // delete from genre where id =?1
     }
 
     @Override
-    public Optional<Genre> getById(Long id) {
-        return genreRepo.findById(id);
+    public Optional<Album> getById(Long id) {
+        return albumRepo.findById(id);
     }
 
 }

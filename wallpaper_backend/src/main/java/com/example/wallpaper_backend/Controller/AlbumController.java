@@ -1,8 +1,9 @@
-package com.example.comixnookbackend.Controller;
+package com.example.wallpaper_backend.Controller;
 
-import com.example.comixnookbackend.Entity.Genre;
-import com.example.comixnookbackend.Pojo.GenrePojo;
-import com.example.comixnookbackend.Service.GenreService;
+import com.example.wallpaper_backend.Entity.Album;
+import com.example.wallpaper_backend.Pojo.AlbumPojo;
+import com.example.wallpaper_backend.Service.AlbumService;
+import com.example.wallpaper_backend.Service.AlbumService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
@@ -12,30 +13,30 @@ import java.util.Optional;
 
 @Service
 @RestController
-@RequestMapping("genre")
+@RequestMapping("album")
 @RequiredArgsConstructor
-public class GenreController {
-    private final GenreService genreService;
+public class AlbumController {
+    private final AlbumService albumService;
 
     @PostMapping("/save")
-    public String saveUser(@RequestBody GenrePojo genrePojo){
-        genreService.save(genrePojo);
+    public String saveUser(@RequestBody AlbumPojo albumPojo){
+        albumService.save(albumPojo);
         return "in this section";
     }
 
     @GetMapping("/getAll")
-    public List<Genre> getAll(){
-        return this.genreService.getAll();
+    public List<Album> getAll(){
+        return this.albumService.getAll();
     }
 
     @GetMapping("/getById/{id}")
-    public Optional<Genre> getById(@PathVariable("id") Long id){
-        return this.genreService.getById(id);
+    public Optional<Album> getById(@PathVariable("id") Long id){
+        return this.albumService.getById(id);
     }
 
     @DeleteMapping("/deleteById/{id}")
     public void deleteById(@PathVariable("id") Long id){
-        this.genreService.deleteById(id);
+        this.albumService.deleteById(id);
     }
 
 }

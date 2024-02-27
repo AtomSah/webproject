@@ -1,4 +1,4 @@
-package com.example.comixnookbackend.Pojo;
+package com.example.wallpaper_backend.Pojo;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,6 @@ import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -21,13 +20,10 @@ public class ItemPojo {
     @NotNull
     private String itemName;
 
-    private LocalDate releasedDate;
-
-    private String itemDescription;
 
     private String downloadLink;
 
     private MultipartFile itemImage;
 
-    private Long genreId;  // Assuming genreIds represent the IDs of associated genres
+    private Long albumId;  // Assuming genreIds represent the IDs of associated genres
 }

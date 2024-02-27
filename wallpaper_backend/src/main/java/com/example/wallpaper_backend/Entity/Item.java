@@ -1,10 +1,9 @@
-package com.example.comixnookbackend.Entity;
+package com.example.wallpaper_backend.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Data
@@ -18,11 +17,6 @@ public class Item {
     @Column(name = "item_name", nullable = false, unique = true)
     private String itemName;
 
-    @Column(name = "release_date")
-    private LocalDate releasedDate;
-
-    @Column(name = "item_description",columnDefinition = "TEXT")
-    private String itemDescription;
 
     @Column(name = "download_link")
     private String downloadLink;
@@ -30,10 +24,8 @@ public class Item {
     @Column(name = "item_image")
     private String itemImage;
 
-//    @Column(name = "comic_size")
-//    private String comicSize;
 
     @ManyToOne
-    @JoinColumn(name = "genre_id", nullable = false)
-    private Genre genreId;
+    @JoinColumn(name = "album_id", nullable = false)
+    private Album albumId;
 }

@@ -1,10 +1,10 @@
-package com.example.comixnookbackend.Repo;
+package com.example.wallpaper_backend.Repo;
 
-import com.example.comixnookbackend.Entity.Genre;
+import com.example.wallpaper_backend.Entity.Album;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface GenreRepo extends JpaRepository<Genre,Long> {
+public interface AlbumRepo extends JpaRepository<Album,Long> {
 
 }

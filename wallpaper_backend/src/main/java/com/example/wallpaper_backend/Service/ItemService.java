@@ -1,7 +1,7 @@
-package com.example.comixnookbackend.Service;
+package com.example.wallpaper_backend.Service;
 
-import com.example.comixnookbackend.Entity.Item;
-import com.example.comixnookbackend.Pojo.ItemPojo;
+import com.example.wallpaper_backend.Entity.Item;
+import com.example.wallpaper_backend.Pojo.ItemPojo;
 
 import java.io.IOException;
 import java.util.List;
