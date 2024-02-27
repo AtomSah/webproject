@@ -13,6 +13,12 @@ body {
   box-sizing: border-box;
 }
 
+.green-color{
+  background-color: #659d9d;
+}
+td{
+  text-align: center;
+}
 
 
 

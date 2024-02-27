@@ -1,6 +1,7 @@
 import "./wallpaper.css"
 import {TiStar} from "react-icons/ti";
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 const WallpaperCard = ({ menuData }) => {
     //   console.log(menuData);
@@ -9,18 +10,18 @@ const WallpaperCard = ({ menuData }) => {
         <>
             <div className={"card-container  "}>
                 {menuData.map((item) => (
-                    <div key={item.id} className={"card "}>
+                    <div key={item.id} className={"card transform-gpu scale-100 hover:scale-105 transition-transform duration-500"}>
                         <div className={"card-body"}>
-                            <span className={"card-number card-circle"}>{item.id}</span>
+                            {/*<span className={"card-number card-circle md:text-3xl text-xl"}>{item.id}</span>*/}
                             <span className={"card-author subtitle"}>{item.name}</span>
-                            <h2 className={"card-title"}>{item.category}</h2>
+                            {/*<h2 className={"card-title"}>{item.category}</h2>*/}
                         </div>
-                        <img src={item.image} alt={item.name} className={"card-media"} />
+                        <img src={item.image} alt={item.name} className={"bg-cover h-[15rem]"} />
                         <span className={"card-tag "}><TiStar style={{width:"50px"}}/></span>
-                        <span>
-                            <button className={"download"}>
+                        <span className={"cursor-pointer"}>
+                            <Link to={item.dLink}><button className={"download"}>
                                 Download
-                            </button>
+                            </button></Link>
                         </span>
                     </div>
                 ))}
