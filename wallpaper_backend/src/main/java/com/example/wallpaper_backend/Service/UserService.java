@@ -1,9 +1,9 @@
-package com.example.comixnookbackend.Service;
+package com.example.wallpaper_backend.Service;
 
 
-import com.example.comixnookbackend.Entity.User;
-import com.example.comixnookbackend.Pojo.NewPasswordPojo;
-import com.example.comixnookbackend.Pojo.UserPojo;
+import com.example.wallpaper_backend.Entity.User;
+import com.example.wallpaper_backend.Pojo.NewPasswordPojo;
+import com.example.wallpaper_backend.Pojo.UserPojo;
 
 import java.util.List;
 import java.util.Optional;

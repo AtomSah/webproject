@@ -1,18 +1,19 @@
-package com.example.comixnookbackend.Service.Impl;
+package com.example.wallpaper_backend.Service.Impl;
 
 
-import com.example.comixnookbackend.Config.PasswordEncoderUtil;
-import com.example.comixnookbackend.Entity.User;
-import com.example.comixnookbackend.Pojo.NewPasswordPojo;
-import com.example.comixnookbackend.Pojo.UserPojo;
-import com.example.comixnookbackend.Repo.UserRepository;
-import com.example.comixnookbackend.Service.UserService;
-import com.example.comixnookbackend.security.JwtService;
+import com.example.wallpaper_backend.Config.PasswordEncoderUtil;
+import com.example.wallpaper_backend.Entity.User;
+import com.example.wallpaper_backend.Pojo.NewPasswordPojo;
+import com.example.wallpaper_backend.Pojo.UserPojo;
+import com.example.wallpaper_backend.Repo.UserRepository;
+import com.example.wallpaper_backend.Service.UserService;
+import com.example.wallpaper_backend.security.JwtService;
 import jakarta.persistence.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

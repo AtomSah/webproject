@@ -1,4 +1,4 @@
-package com.example.comixnookbackend.Config;
+package com.example.wallpaper_backend.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

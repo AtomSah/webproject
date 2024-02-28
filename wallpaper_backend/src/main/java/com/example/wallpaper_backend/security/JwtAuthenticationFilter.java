@@ -1,7 +1,7 @@
-package com.example.comixnookbackend.security;
+package com.example.wallpaper_backend.security;
 
 
-import com.example.comixnookbackend.Service.Impl.CustomUserDetailService;
+import com.example.wallpaper_backend.Service.Impl.CustomUserDetailService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

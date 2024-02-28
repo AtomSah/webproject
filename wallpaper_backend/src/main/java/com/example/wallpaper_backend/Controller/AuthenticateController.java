@@ -1,8 +1,8 @@
-package com.example.comixnookbackend.Controller;
+package com.example.wallpaper_backend.Controller;
 
-import com.example.comixnookbackend.Pojo.AuthenticateRequest;
-import com.example.comixnookbackend.Service.AuthenticateService;
-import com.example.comixnookbackend.helper.ApiResponse;
+import com.example.wallpaper_backend.Pojo.AuthenticateRequest;
+import com.example.wallpaper_backend.Service.AuthenticateService;
+import com.example.wallpaper_backend.helper.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

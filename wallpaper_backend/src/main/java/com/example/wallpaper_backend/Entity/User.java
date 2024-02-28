@@ -1,4 +1,4 @@
-package com.example.comixnookbackend.Entity;
+package com.example.wallpaper_backend.Entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
+
 @Entity
 @Table(name="users", uniqueConstraints = @UniqueConstraint(columnNames = {"email","ContactNumber"}))
 @Getter

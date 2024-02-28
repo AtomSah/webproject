@@ -1,23 +1,21 @@
-package com.example.comixnookbackend.Service.Impl;
-import com.example.comixnookbackend.Entity.User;
-import com.example.comixnookbackend.Pojo.EmailRequest;
-import com.example.comixnookbackend.Repo.UserRepository;
-import com.example.comixnookbackend.Service.EmailService;
-import com.example.comixnookbackend.security.JwtService;
+package com.example.wallpaper_backend.Service.Impl;
+
+import com.example.wallpaper_backend.Entity.User;
+import com.example.wallpaper_backend.Pojo.EmailRequest;
+import com.example.wallpaper_backend.Repo.UserRepository;
+import com.example.wallpaper_backend.Service.EmailService;
+import com.example.wallpaper_backend.security.JwtService;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
-
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;

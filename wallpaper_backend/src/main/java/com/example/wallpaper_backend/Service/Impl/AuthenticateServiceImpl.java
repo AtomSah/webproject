@@ -1,11 +1,11 @@
-package com.example.comixnookbackend.Service.Impl;
+package com.example.wallpaper_backend.Service.Impl;
 
-import com.example.comixnookbackend.Entity.User;
-import com.example.comixnookbackend.Pojo.AuthenticateRequest;
-import com.example.comixnookbackend.Pojo.AuthenticationResponse;
-import com.example.comixnookbackend.Repo.UserRepository;
-import com.example.comixnookbackend.Service.AuthenticateService;
-import com.example.comixnookbackend.security.JwtService;
+import com.example.wallpaper_backend.Entity.User;
+import com.example.wallpaper_backend.Pojo.AuthenticateRequest;
+import com.example.wallpaper_backend.Pojo.AuthenticationResponse;
+import com.example.wallpaper_backend.Repo.UserRepository;
+import com.example.wallpaper_backend.Service.AuthenticateService;
+import com.example.wallpaper_backend.security.JwtService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -35,6 +35,6 @@ public class AuthenticateServiceImpl implements AuthenticateService {
         UserDetails userDetails =(UserDetails) user;
 
         String jwtToken = jwtService.generateToken(userDetails);
-        return AuthenticationResponse.builder().token(jwtToken).userId(user.getId()).isAdmin(user.getId()==1).userName(user.getFullName()).userEmail(user.getEmail()).build();
+        return AuthenticationResponse.builder().token(jwtToken).userId(user.getId()).isAdmin(user.getId()==2).userName(user.getFullName()).userEmail(user.getEmail()).build();
     }
 }

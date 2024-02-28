@@ -1,4 +1,4 @@
-package com.example.comixnookbackend.Pojo;
+package com.example.wallpaper_backend.Pojo;
 
 import lombok.Getter;
 import lombok.Setter;

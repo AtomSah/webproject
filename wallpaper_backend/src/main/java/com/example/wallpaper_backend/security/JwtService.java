@@ -1,4 +1,4 @@
-package com.example.comixnookbackend.security;
+package com.example.wallpaper_backend.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

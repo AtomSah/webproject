@@ -1,6 +1,6 @@
-package com.example.comixnookbackend.Service.Impl;
+package com.example.wallpaper_backend.Service.Impl;
 
-import com.example.comixnookbackend.Repo.UserRepository;
+import com.example.wallpaper_backend.Repo.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

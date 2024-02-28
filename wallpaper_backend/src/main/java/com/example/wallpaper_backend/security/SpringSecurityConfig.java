@@ -1,7 +1,7 @@
-package com.example.comixnookbackend.security;
+package com.example.wallpaper_backend.security;
 
-import com.example.comixnookbackend.Config.PasswordEncoderUtil;
-import com.example.comixnookbackend.Service.Impl.CustomUserDetailService;
+import com.example.wallpaper_backend.Config.PasswordEncoderUtil;
+import com.example.wallpaper_backend.Service.Impl.CustomUserDetailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.example.comixnookbackend.Entity;
+package com.example.wallpaper_backend.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;

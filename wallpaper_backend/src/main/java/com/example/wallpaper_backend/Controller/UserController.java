@@ -1,10 +1,9 @@
-package com.example.comixnookbackend.Controller;
+package com.example.wallpaper_backend.Controller;
 
-import com.example.comixnookbackend.Entity.User;
-import com.example.comixnookbackend.Pojo.NewPasswordPojo;
-import com.example.comixnookbackend.Pojo.UserPojo;
-import com.example.comixnookbackend.Service.UserService;
-import com.example.comixnookbackend.helper.ApiResponse;
+import com.example.wallpaper_backend.Entity.User;
+import com.example.wallpaper_backend.Pojo.UserPojo;
+import com.example.wallpaper_backend.Service.UserService;
+import com.example.wallpaper_backend.helper.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

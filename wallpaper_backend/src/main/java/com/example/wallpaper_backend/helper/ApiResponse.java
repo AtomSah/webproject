@@ -1,4 +1,4 @@
-package com.example.comixnookbackend.helper;
+package com.example.wallpaper_backend.helper;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;

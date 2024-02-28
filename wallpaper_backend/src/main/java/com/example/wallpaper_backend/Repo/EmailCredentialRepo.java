@@ -1,6 +1,6 @@
-package com.example.comixnookbackend.Repo;
+package com.example.wallpaper_backend.Repo;
 
-import com.example.comixnookbackend.Entity.EmailCredentials;
+import com.example.wallpaper_backend.Entity.EmailCredentials;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

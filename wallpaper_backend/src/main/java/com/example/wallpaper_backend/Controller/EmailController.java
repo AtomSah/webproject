@@ -1,7 +1,7 @@
-package com.example.comixnookbackend.Controller;
+package com.example.wallpaper_backend.Controller;
 
-import com.example.comixnookbackend.Pojo.EmailRequest;
-import com.example.comixnookbackend.Service.EmailService;
+import com.example.wallpaper_backend.Pojo.EmailRequest;
+import com.example.wallpaper_backend.Service.EmailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,7 +1,5 @@
 package com.example.wallpaper_backend;
 
-import com.example.wallpaper_backend.Entity.User;
-import com.example.wallpaper_backend.Repo.UserRepo;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

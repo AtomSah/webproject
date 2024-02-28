@@ -1,13 +1,12 @@
-package com.example.comixnookbackend.Config;
+package com.example.wallpaper_backend.Config;
 
-import com.example.comixnookbackend.Entity.EmailCredentials;
-import com.example.comixnookbackend.Repo.EmailCredentialRepo;
+import com.example.wallpaper_backend.Entity.EmailCredentials;
+import com.example.wallpaper_backend.Repo.EmailCredentialRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-
 
 import java.util.Properties;
 
