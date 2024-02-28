@@ -1,21 +1,49 @@
 import Navbar from "../components/navbar.jsx";
 import "../login&register/register.css"
+import {useForm} from "react-hook-form";
+import {useMutation} from "@tanstack/react-query";
+import axios from "axios";
 
 const Register = ()=> {
+
+    const{register,
+        handleSubmit,
+        formState,
+        reset} = useForm();
+    const {errors} = formState;
+
+    const useApiCall = useMutation({
+        mutationKey:["POST_USER_DATA"],
+        mutationFn:(payload)=>{
+            return axios.post("http://localhost:8084/user/save",payload)
+        },onSuccess:()=>{
+            reset();
+            window.location.href = '/Login';
+        }
+    })
+
+    const onSubmit=(value)=>{
+        useApiCall.mutate(value)
+    }
+
     return(
         <>
             <Navbar/>
             <div className={"register-overlay"}>
                 <div className={"register-modal-content"}>
                     <h2>Sign Up</h2>
-                    <form>
-                        <input className="username" type="text" placeholder="Username"></input>
-                        {/*<input className="lname" type="text" placeholder="Last name"></input>*/}
-                        <input className="email" type="text" placeholder="Email"></input>
-                        <input className="password" type="password" placeholder="Password"></input>
-                        <input className="confirm_password" type="password" placeholder="Confirm Password"></input>
-                        <input className="security-question" type="text" placeholder="Security Question"></input>
-                        <button className="sign-in">Sign in</button>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input className="username" type="text" placeholder="Enter Your Name" {...register("fullName",{required:"Name is required"})}></input>
+                        <input className="email" type="text" placeholder="Email" {...register("email",{required:"Email is required",
+                            pattern: {
+                                value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
+                                message: "Invalid email address"
+                            }})}></input>
+                        <input className="password" type="password" placeholder="Password" {...register("password",{required:"Password is required",minLength: {
+                                value: 4,
+                                message: "Password must be at least 4 characters long"
+                            }})}></input>
+                        <button type={"submit"} className="sign-in bg-gray-600">Sign in</button>
                     </form>
                 </div>
             </div>

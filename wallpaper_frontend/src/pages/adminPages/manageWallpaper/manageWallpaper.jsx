@@ -71,7 +71,7 @@ const ManageWallpaper = () =>{
         {
             mutationKey:["DELETE_COMIC_BY_ID"],
             mutationFn(id){
-                return axios.delete("http://localhost:8084/wallpaper/deleteById/"+id);
+                return axios.delete("http://localhost:8084/item/deleteById/"+id);
             }
             ,onSuccess(){refetch()}
         }
@@ -135,12 +135,12 @@ const ManageWallpaper = () =>{
                                         <td className={"flex gap-4 justify-center"}>
                                             <h1 className={"action-icon hover:text-black"}
                                                 onClick={()=>{
-                                                    navigate("/EditWallpaper/"+i?.wallpaperId);
+                                                    navigate("/EditWallpaper/"+i?.itemId);
                                                     console.log(i?.id)
                                                 }}><MdEditSquare/></h1>
                                             <h1 onClick={() => {
                                                 if (window.confirm("Are you sure you want to delete this wallpaper item?")) {
-                                                    deleteByIdApi.mutate(i?.wallpaperId);
+                                                    deleteByIdApi.mutate(i?.itemId);
                                                 }}}
                                                 className={"action-icon hover:text-red-800"}><MdDelete /></h1>
                                         </td>
@@ -181,7 +181,7 @@ const ManageWallpaper = () =>{
                                 <div className={"w-7/12 justify-between items-center pl-1"}>
                                     <h1 className={"text-lg pl-1"}>Select Wallpaper : </h1>
                                     <div className={"w-full h-12 justify-between border-solid border rounded-xl border-gray-300 flex items-center pl-1"}>
-                                        <input type={"file"} className={"text-gray-400"} {...register("itemImage``````````````")}/>
+                                        <input type={"file"} className={"text-gray-400"} {...register("itemImage")}/>
                                     </div>
                                 </div>
                             </div>

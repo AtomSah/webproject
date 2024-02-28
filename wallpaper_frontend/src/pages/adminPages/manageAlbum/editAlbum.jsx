@@ -13,7 +13,7 @@ const EditAlbum = () =>{
         mutationKey:["POST_GENRE_DATA"],
         mutationFn:(payload)=>{
             console.log(payload)
-            return axios.post("http://localhost:8082/genre/save",payload)
+            return axios.post("http://localhost:8084/album/save",payload)
         },onSuccess: () => {
             reset();
             navigate('/ManageAlbum')
@@ -30,7 +30,7 @@ const EditAlbum = () =>{
     const{data:getByIdApi}=useQuery({
         queryKey:["GET_BY_ID_GENRE"],
         queryFn(){
-            return axios.get("http://localhost:8082/genre/getById/"+pk_id)
+            return axios.get("http://localhost:8084/album/getById/"+pk_id)
         },enabled:!!pk_id
     })
 
@@ -54,7 +54,7 @@ const EditAlbum = () =>{
                             <form method="dialog" className={"px-6 py-6"} onSubmit={handleSubmit(onSubmit)}>
                                 <h3 className="font-bold text-2xl">Edit Album</h3>
                                 <div className={"w-full h-12 border-solid border rounded-xl border-gray-300 mt-10 flex items-center pl-4 pr-2"}>
-                                    <input type={"text"} placeholder={"Enter Album Name"} className={"w-full outline-none appearance-none"} {...register("genre",{required:"Genre Name is required!!"})} />
+                                    <input type={"text"} placeholder={"Enter Album Name"} className={"w-full outline-none appearance-none"} {...register("album",{required:"Genre Name is required!!"})} />
                                 </div>
                                 {/*<h6 className={"text-xs pl-2 text-gray-500"}>{errors?.genre?.message}</h6>*/}
 

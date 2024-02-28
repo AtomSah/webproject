@@ -1,10 +1,8 @@
-
-// import React from 'react'
-// import Login from "../login&register/login.jsx";
 import {Link, NavLink} from "react-router-dom"
 import logo from "../../../src/assets/Screenshot_2024-02-11_181501-removebg-preview.png"
 import {Component} from "react";
 import "./../../pages/components/navbar.css"
+import {doLogout, isAuthenticated} from "../service/authService";
 
 
 class Navbar extends Component{
@@ -15,6 +13,17 @@ class Navbar extends Component{
     }
 
     render() {
+
+        const handleLogout = () => {
+            const confirmLogout = window.confirm('Are you sure you want to logout?');
+            if (confirmLogout) {
+                doLogout();
+                window.location.href = '/';
+            }
+        };
+
+        const userName = localStorage.getItem('userName');
+
         return(
             <nav className={"NavbarItems"}>
                 <h1 className={"navbar-logo"}>
@@ -42,13 +51,21 @@ class Navbar extends Component{
                     </div>
 
                 <div className={"flex gap-4"}>
-                    <div className={"btn-login  w-28 h-11 flex items-center justify-center"} >
-                        <Link to={'/login'}><h3 onClick={console.log("login")}><a>Sign-In</a></h3></Link>
-                    </div>
 
-                    <div className={" btn-login   w-28 h-11 flex items-center justify-center "} >
-                        <Link to={'/register'}><h3><a>Sign-Up</a></h3></Link>
-                    </div>
+                    {isAuthenticated() && userName ? (
+                        <h1 className={"btn-style2"}>
+                            <h3 className={"btn-login"} onClick={handleLogout}><a>Logout</a></h3>
+                        </h1>
+                    ) : (
+                        <>
+                            <div className={"btn-login  w-28 h-11 flex items-center justify-center"} >
+                                <Link to={'/login'}><h3 onClick={console.log("login")}><a>Sign-In</a></h3></Link>
+                            </div>
+                            <div className={" btn-login   w-28 h-11 flex items-center justify-center "} >
+                                <Link to={'/register'}><h3><a>Sign-Up</a></h3></Link>
+                            </div>
+                        </>
+                    )}
                 </div>
                 </ul>
 

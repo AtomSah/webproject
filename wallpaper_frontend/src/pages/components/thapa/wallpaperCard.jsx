@@ -2,6 +2,7 @@ import "./wallpaper.css"
 import {TiStar} from "react-icons/ti";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
+import {isAuthenticated} from "../../service/authService";
 
 const WallpaperCard = ({ menuData }) => {
     //   console.log(menuData);
@@ -19,9 +20,18 @@ const WallpaperCard = ({ menuData }) => {
                         <img src={item.image} alt={item.name} className={"bg-cover h-[15rem]"} />
                         <span className={"card-tag "}><TiStar style={{width:"50px"}}/></span>
                         <span className={"cursor-pointer"}>
-                            <Link to={item.dLink}><button className={"download"}>
-                                Download
-                            </button></Link>
+                           {isAuthenticated() ? (
+                               <Link to={item.dLink}>
+                                   <button className={"download"}>
+                                       Download
+                                   </button>
+                               </Link>
+                           ) : (
+                               <button className={"download"} disabled>
+                                   Download
+                               </button>
+                           )}
+
                         </span>
                     </div>
                 ))}
