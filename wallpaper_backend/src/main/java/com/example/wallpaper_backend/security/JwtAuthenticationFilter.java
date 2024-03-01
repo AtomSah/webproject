@@ -1,6 +1,4 @@
 package com.example.wallpaper_backend.security;
-
-
 import com.example.wallpaper_backend.Service.Impl.CustomUserDetailService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
