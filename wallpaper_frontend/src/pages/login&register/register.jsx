@@ -44,7 +44,7 @@ const Register = ()=> {
                                 value: 4,
                                 message: "Password must be at least 4 characters long"
                             }})}></input>
-                        <button type={"submit"} className="sign-in bg-gray-600  ">Sign in</button>
+                        <button type={"submit"} className="sign-in  ">Sign in</button>
                     </form>
                 </div>
                 <div className="md:w-7/12 h-[82%] absolute right-1 bg-cover bg-center mt-14 " style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp12299953.jpg')", borderRadius: "15%" }}>

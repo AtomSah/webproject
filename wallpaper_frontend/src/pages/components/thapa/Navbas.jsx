@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Navbas = ({ filterItem, genreList }) => {
     return (
         <>
-            <nav className="navbar flex justify-center bg-gradient-to-r from-teal-100 to-purple-300 ">
+            <nav className="navbar flex justify-center pt-4 bg-gradient-to-r from-teal-100 to-purple-300 ">
                 <div className="btn-group ">
                     {genreList.map((curElem) => {
                         return (

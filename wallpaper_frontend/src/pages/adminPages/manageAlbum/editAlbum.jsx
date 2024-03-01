@@ -58,7 +58,7 @@ const EditAlbum = () =>{
                                 </div>
                                 {/*<h6 className={"text-xs pl-2 text-gray-500"}>{errors?.genre?.message}</h6>*/}
 
-                                <button type={"submit"} className={"btn-style2  cursor-pointer green-color text-white rounded-xl"}><a>Edit</a></button>
+                                <button type={"submit"} className={"btn-add w-24 h-12 absolute bottom-6 right-6 cursor-pointer green-color text-white rounded-xl"}><a>Edit</a></button>
                             </form>
                         </div>
                     </div>

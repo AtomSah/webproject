@@ -17,7 +17,7 @@ const WallpaperCard = ({wallpaperData  }) => {
 
     return (
         <>
-            <div className={"card-container Figure 5:User Runner Test "}>
+            <div className={"card-container bg-gradient-to-r from-teal-100 to-purple-300 "}>
                 {wallpaperData.map((i) => (
                     <div key={i.itemId} className={"card transform-gpu scale-100 hover:scale-105 transition-transform duration-500"}>
                         <div className={"card-body"}>

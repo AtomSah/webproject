@@ -63,7 +63,7 @@ const ManageWallpaper = () =>{
 
     //Searching comics
     const filteredData = itemData?.data.filter((i) => {
-        return search.toLowerCase() === '' ? i :i?.wallpaperName.toLowerCase().includes(search);
+        return search.toLowerCase() === '' ? i :i?.itemName.toLowerCase().includes(search);
     })
 
     //Deleting comic Item
@@ -133,11 +133,6 @@ const ManageWallpaper = () =>{
                                         </td>
                                         {/*<td>{new Date(i?.releasedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</td>*/}
                                         <td className={"flex gap-4 justify-center"}>
-                                            <h1 className={"action-icon hover:text-black"}
-                                                onClick={()=>{
-                                                    navigate("/EditWallpaper/"+i?.itemId);
-                                                    console.log(i?.id)
-                                                }}><MdEditSquare/></h1>
                                             <h1 onClick={() => {
                                                 if (window.confirm("Are you sure you want to delete this wallpaper item?")) {
                                                     deleteByIdApi.mutate(i?.itemId);

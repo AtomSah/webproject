@@ -47,7 +47,7 @@ const ManageAlbum = () =>{
 
     //Searching data
     const filteredData = genreData?.data.filter((i) => {
-        return search.toLowerCase() === '' ? i :i?.genre.toLowerCase().includes(search);
+        return search.toLowerCase() === '' ? i :i?.album.toLowerCase().includes(search);
     })
 
     //Deleting comic Genre

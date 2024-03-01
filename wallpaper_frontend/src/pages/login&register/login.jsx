@@ -69,7 +69,7 @@ const Login = () => {
                     <div className={"md:w-6/12 w-11/12 flex justify-end pt-3 pr-1"}>
                         <Link to={"/forgetpassword"}><h3 className={"text-gray-500 cursor-pointer transition-all hover:text-black"}>Forgot password?</h3></Link>
                     </div>
-                    <button className={"sign-in bg-gray-600"} type={"submit"}>
+                    <button className={"sign-in1 "} type={"submit"}>
                         {/*mt-8 md:w-6/12 w-11/12 rounded-2xl h-12 bg-pink-700 text-white text-lg font-normal transition duration-200 ease-in-out hover:bg-white hover:text-black hover:font-semibold border-2 border-black*/}
                         Login
                     </button>

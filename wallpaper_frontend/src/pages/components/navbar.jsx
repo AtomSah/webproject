@@ -46,8 +46,8 @@ class Navbar extends Component{
 
                 <div className={"flex gap-4"}>
                     {isAuthenticated() && userName ? (
-                        <h1 className={"btn-login w-28 h-11  flex items-center justify-center "}>
-                            <h3 className={"btn-login"} onClick={handleLogout}><a>Logout</a></h3>
+                        <h1 className={" btn-login w-28 h-11 left-96  flex items-center justify-center "}>
+                            <h3 className={""} onClick={handleLogout}><a>Logout</a></h3>
                         </h1>
                     ) : (
                         <>

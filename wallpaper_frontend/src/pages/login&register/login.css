@@ -67,3 +67,19 @@
 .btn-login:hover::after{
     translate: 0;
 }
+.sign-in1{
+    padding: 10px 25px;
+    margin: 25px 0 20px 27px;
+    background-color: #f9fafb;
+    border: 2px solid #111827;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all ease 0.3s;
+    justify-content: center;
+}
+
+.sign-in1:hover{
+    background-color: #070202;
+    color: #f9fafb;
+}
