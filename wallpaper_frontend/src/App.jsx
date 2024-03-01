@@ -8,6 +8,8 @@ import ManageAlbum from "./pages/adminPages/manageAlbum/manageAlbum.jsx";
 import EditAlbum from "./pages/adminPages/manageAlbum/editAlbum.jsx";
 import ManageWallpaper from "./pages/adminPages/manageWallpaper/manageWallpaper.jsx";
 import UsersPage from "./pages/adminPages/usersPage.jsx";
+import Footer from "./pages/components/Footer1.jsx";
+import New from "./pages/homePages/New.jsx";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,7 @@ function App() {
                     {path: "/EditAlbum/:pk_id", element: <EditAlbum/>},
                     {path: "/ManageWallpaper", element: <ManageWallpaper/>},
                     {path: "/UsersPage", element: <UsersPage/>},
+                    {path: "/New", element: <New/>},
                 ])} />
             </QueryClientProvider>
         </>

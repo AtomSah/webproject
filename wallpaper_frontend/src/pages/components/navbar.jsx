@@ -27,41 +27,34 @@ class Navbar extends Component{
         return(
             <nav className={"NavbarItems"}>
                 <h1 className={"navbar-logo"}>
-                    <img src={logo} alt={"ComicNook"} width={"140px"}/>
+                    <NavLink to={"/"}><img src={logo} alt={"ComicNook"} width={"140px"}/></NavLink>
                 </h1>
 
                 <div className={"menu-icons"} onClick={this.handleClick}>
                     <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"} style={{fontSize:"25px"}}></i>
                 </div>
-                <div> </div>
                 <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
                     <div className={"nav-menu-list"}>
                         <li>
                             <NavLink to={"/"}>Home</NavLink>
                         </li>
+
                         <li>
-                            <NavLink to={"/GenrePage"}>Genre</NavLink>
+                            <NavLink to={"/New"}>New</NavLink>
                         </li>
-                        <li>
-                            <NavLink to={"/NewPage"}>New</NavLink>
-                        </li>
-                        <div className={"navbar-search-wrapper"}>
-                            <input type={"search"} placeholder={"SEARCH"}/>
-                        </div>
                     </div>
 
                 <div className={"flex gap-4"}>
-
                     {isAuthenticated() && userName ? (
-                        <h1 className={"btn-style2"}>
+                        <h1 className={"btn-login w-28 h-11  flex items-center justify-center "}>
                             <h3 className={"btn-login"} onClick={handleLogout}><a>Logout</a></h3>
                         </h1>
                     ) : (
                         <>
-                            <div className={"btn-login  w-28 h-11 flex items-center justify-center"} >
+                            <div className={"btn-login  w-28 h-11 left-96 flex items-center justify-center"} >
                                 <Link to={'/login'}><h3 onClick={console.log("login")}><a>Sign-In</a></h3></Link>
                             </div>
-                            <div className={" btn-login   w-28 h-11 flex items-center justify-center "} >
+                            <div className={" btn-login   w-28 h-11 left-96 flex items-center justify-center "} >
                                 <Link to={'/register'}><h3><a>Sign-Up</a></h3></Link>
                             </div>
                         </>

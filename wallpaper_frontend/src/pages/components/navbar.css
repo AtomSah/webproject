@@ -25,11 +25,12 @@
 
 }
 .nav-menu-list{
-    padding-left: 6vw;
+    padding-left: 15vh;
     display: flex;
-    gap: 40px;
+    gap: 120px;
     align-items: center;
     font-family: "Gilroy Medium";
+    font-size: 1.1rem;
 }
 .active{
     color: #681cb0;

@@ -1,20 +1,23 @@
 
 *{
     background-image: image("product_1.png");
+    /*background: linear-gradient(66deg, #e6fbfe 0%, #edddfb 100%);*/
+
 }
 
 .login-modal-content{
     position: absolute;
     padding: 14px 28px;
-    top: 50%;
-    left: 50%;
+    top: 25rem;
+    left: 80rem;
     transform: translate(-50%, -50%);
     border-radius: 15px;
-    font-size: 1.1rem;
-    width: 25vw;
-    height: 50vh;
     z-index: 102;
     border: 2.5px solid#162938;
+
+}
+.border12{
+    border: 2.5px solid #162938
 }
 
 .login-modal-content h2{
@@ -44,7 +47,8 @@
     border-radius: 1rem;
     cursor: pointer;
     position: relative;
-    transition: all 0.3s;
+    transition: all ease 0.3s;
+    justify-content: center;
 }
 .btn-login::after {
     content: "";

@@ -6,7 +6,7 @@
     grid-gap: 30px;
     justify-content: space-around;
     padding-bottom: 10vh;
-    background: linear-gradient(66deg, #e6fbfe 0%, #edddfb 100%);
+    /*background: linear-gradient(66deg, #e6fbfe 0%, #edddfb 100%);*/
 
 }
 .card{
@@ -39,6 +39,7 @@
     letter-spacing: 0.5px;
     margin: 12px 0 13px 0;
     text-transform: uppercase;
+    font-family: "Gilroy SemiBold";
 }
 .card-title{
     font-family: " gilroy-bold","Cormorant Garamond", serif;

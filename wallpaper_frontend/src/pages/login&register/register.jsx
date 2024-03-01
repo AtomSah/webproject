@@ -29,8 +29,9 @@ const Register = ()=> {
     return(
         <>
             <Navbar/>
-            <div className={"register-overlay"}>
-                <div className={"register-modal-content"}>
+            <div className={"register-overlay flex w-full h-screen pt-8 px-10 bg-white justify-between"}>
+
+                <div className={"register-modal-content w-full md:w-3/12 h-[60%] flex justify-center items-center flex-col"}>
                     <h2>Sign Up</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input className="username" type="text" placeholder="Enter Your Name" {...register("fullName",{required:"Name is required"})}></input>
@@ -43,8 +44,10 @@ const Register = ()=> {
                                 value: 4,
                                 message: "Password must be at least 4 characters long"
                             }})}></input>
-                        <button type={"submit"} className="sign-in bg-gray-600">Sign in</button>
+                        <button type={"submit"} className="sign-in bg-gray-600  ">Sign in</button>
                     </form>
+                </div>
+                <div className="md:w-7/12 h-[82%] absolute right-1 bg-cover bg-center mt-14 " style={{ backgroundImage: "url('https://wallpapercave.com/wp/wp12299953.jpg')", borderRadius: "15%" }}>
                 </div>
             </div>
         </>

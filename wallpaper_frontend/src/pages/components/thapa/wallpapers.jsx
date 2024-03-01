@@ -1,42 +1,59 @@
-import React, {useState} from "react";
+import  {useEffect, useState} from "react";
 import "./wallpaper.css"
-import WallpaperMenu from "./wallpaperApi.jsx";
 import WallpaperCard from "./wallpaperCard.jsx";
 import Navbas from "./Navbas.jsx";
+import {useQuery} from "@tanstack/react-query";
+import axios from "axios";
 
-const uniqueList = [
-    ...new Set(
-        WallpaperMenu.map((curElem) => {
-            return curElem.category;
-        })
-    ),
-    "All",
-];
 
-console.log(uniqueList);
+
 const Wallpaper = () => {
 
-    const [menuData, setMenuData] = useState(WallpaperMenu);
-    const [menuList, setMenuList] = useState(uniqueList);
+    const { data: wallpaper } = useQuery({
+        queryKey: ["GET_COMIC_DATA"],
+        queryFn() {
+            return axios.get("http://localhost:8084/item/getAll")
+        },
+    });
 
-    const filterItem = (category) => {
-        if (category === "All") {
-            setMenuData(WallpaperMenu);
+
+    const [wallpaperData, setWallpaperData] = useState([]);
+    const [genreList, setGenreList] = useState([]);
+
+    useEffect(() => {
+        if (wallpaper?.data) {
+            setWallpaperData(wallpaper.data);
+
+            const uniqueCategories = [
+                "All",
+                ...new Set(
+                    wallpaper?.data.map((curElem) => curElem?.albumId.album || "Uncategorized")
+                ),
+
+            ];
+            setGenreList(uniqueCategories);
+        }
+    }, [wallpaper?.data]);
+    // console.log(Comic?.data)
+
+    const filterItem = (album) => {
+        if (album === "All") {
+            setWallpaperData(wallpaper?.data || []);
             return;
         }
 
-        const updatedList = WallpaperMenu.filter((curElem) => {
-            return curElem.category === category;
-        });
+        const updatedList = wallpaper?.data?.filter((curElem) => {
+            return curElem?.albumId.album === album;
+        }) || [];
 
-        setMenuData(updatedList);
+        setWallpaperData(updatedList);
     };
 
     return (
         <>
-            <Navbas filterItem={filterItem} menuList={menuList} />
+            <Navbas filterItem={filterItem} genreList={genreList} />
 
-            <WallpaperCard menuData={menuData} />
+            <WallpaperCard wallpaperData={wallpaperData} />
         </>
     )
 }
