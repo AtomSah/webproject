@@ -27,7 +27,7 @@ const New = () => {
             <Carasol/>
 
             <div className=" h-auto md:p-10 p-5 md:mb-52 bg-gradient-to-r from-teal-100 to-purple-300 ">
-                <h1 className="md:text-4xl text-3xl gilroy-bold">Popular this week.</h1>
+                <h1 className="md:text-4xl text-3xl gilroy-bold">Newly Added Wallpapers.</h1>
                 <div className="pt-6 md:flex  gap-20 flex-wrap  ">
                     {popularWallpaper?.map((i) => (
                         <div key={i?.id} className="md:w-[26rem] md:mb-0 mb-8 rounded-xl cursor-pointer shadow-xl ">

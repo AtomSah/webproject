@@ -96,7 +96,7 @@ const ManageAlbum = () =>{
                         <thead className={"h-12 text-white green-color  rounded-xl gilroy-semibold"}>
                             <tr>
                                 <th className={"px-2"}>ID</th>
-                                <th className={"px-10"}>Genre</th>
+                                <th className={"px-10"}>Album</th>
                                 <th className={"px-10"}>Edit</th>
                                 <th className={"px-10"}>Delete</th>
                             </tr>
