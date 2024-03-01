@@ -35,6 +35,6 @@ public class AuthenticateServiceImpl implements AuthenticateService {
         UserDetails userDetails =(UserDetails) user;
 
         String jwtToken = jwtService.generateToken(userDetails);
-        return AuthenticationResponse.builder().token(jwtToken).userId(user.getId()).isAdmin(user.getId()==2).userName(user.getFullName()).userEmail(user.getEmail()).build();
+        return AuthenticationResponse.builder().token(jwtToken).userId(user.getId()).isAdmin(user.getId()==1).userName(user.getFullName()).userEmail(user.getEmail()).build();
     }
 }

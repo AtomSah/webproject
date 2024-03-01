@@ -1,5 +1,6 @@
 package com.example.wallpaper_backend;
-
+import com.example.wallpaper_backend.Entity.User;
+import com.example.wallpaper_backend.Repo.UserRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -11,29 +12,22 @@ import org.springframework.test.annotation.Rollback;
 
 import java.util.List;
 import java.util.Optional;
-
 @DataJpaTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UserRepositoryTest {
     @Autowired
-    private UserRepo userRepo;
-
+    private UserRepository userRepo;
     @Test
     @Order(1)
     @Rollback(value = false)
     public void saveUser(){
         User user = new User();
-
         user.setFullName("Nirajan Mahato");
         user.setEmail("nirajanmahato44@gmail.com");
         user.setPassword("Nirajan@123");
-        user.setSecurityQuestion("anything  blah blah");
-
         user = userRepo.save(user);
-
         Assertions.assertThat(user.getId()).isGreaterThan(0);
     }
-
     @Test
     @Order(2)
     public void findById(){
@@ -41,7 +35,6 @@ public class UserRepositoryTest {
 
         Assertions.assertThat(user.getId()).isEqualTo(1L);
     }
-
     @Test
     @Order(3)
     public void findAll(){
@@ -55,17 +48,14 @@ public class UserRepositoryTest {
     public void updateUser(){
         User user = userRepo.findById(1L).get();
 
-        user.setFullName("Nirajan Mahato2");
-        user.setEmail("nirajanmahato44@outlook.com");
-        user.setPassword("Nirajan@12");
-
+        user.setFullName("Atom Sah");
+        user.setEmail("atomsah@outlook.com");
+        user.setPassword("Atom@12");
         user = userRepo.save(user);
-
-        Assertions.assertThat(user.getFullName()).isEqualTo("Nirajan Mahato2");
-        Assertions.assertThat(user.getEmail()).isEqualTo("nirajanmahato44@outlook.com");
-        Assertions.assertThat(user.getPassword()).isEqualTo("Nirajan@12");
+        Assertions.assertThat(user.getFullName()).isEqualTo("Atom sah");
+        Assertions.assertThat(user.getEmail()).isEqualTo("atomsah@outlook.com");
+        Assertions.assertThat(user.getPassword()).isEqualTo("Atom@12");
     }
-
     @Test
     @Order(5)
     public void deleteById(){
